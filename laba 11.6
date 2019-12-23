@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
-
-int main() {
-setlocale(LC_ALL, "Russian");
-	int a, b, N, i, c, p;
-	cout << "N: "; cin >> N;
-	a=1; b=1; c=0; p=1;
-	for (i=1; i<=N; i++ ) {
-		if (c<=N) {
-			c=a+b;
-			a=b; b=c;
-			p++;
-		}
-	}
-	if (N==1) { cout << "Число находится в ряду Фибоначчи под номером 1 и 2 "; }
-	else { cout << "Число находится в ряду Фибоначчи под номером " << p; }
-	return 0;
+int main()
+{
+    int n,k;
+    int i=2;
+    cout<<"vvedite chislo"<<endl;
+    cin>>n;
+    int a=0;
+    int b=1;
+    while (b!=n)
+    {
+       k=b;
+       b=a+b;
+       a=k;
+       i++;
+    }
+    cout<<"K="<<i-1<<endl;
 }
