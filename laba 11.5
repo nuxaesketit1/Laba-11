@@ -1,21 +1,27 @@
 #include <iostream>
 using namespace std;
-
-int main() {
-setlocale(LC_ALL, "Russian");
-	int A, B;
-	cout << "A="; cin >> A;
-	cout << "B="; cin >> B;
-	while (A!=B) {
-		if (A>B) {
-			A=A-B;
-			B=B;
+int main()
+{
+    int a,b;
+    cout<<"Vvedite A and B"<<endl;
+    cin>>a>>b;
+    while (a!=b)
+    {
+        if (a>b)
+        {
+            while (a>b)
+		{
+			a-=b;
 		}
-		if (B>A) {
-			B=B-A;
-			A=A;
+        }
+        else
+        {
+            while (b>a)
+		{
+			b-=a;
 		}
-	}
-	cout << "НОД =" << A;
-	return 0;
+        }
+    }
+    cout<<"НОД="<<a<<endl;
+   return 0;
 }
